@@ -14,9 +14,6 @@ from scipy import linalg
 from scipy.special import factorial as fac
 from geopy.distance import geodesic
 
-import sys
-sys.path.append('C:/Users/62813/OFANI-main/OFANI-main/Omori_Project/src/omori')
-
 import src.seis_utils as seis
 import src.omori_utils as omori
 
