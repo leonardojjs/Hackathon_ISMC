@@ -31,7 +31,6 @@ matplotlib.rcParams.update({'font.size': 22})
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 UPLOAD_FOLDER = os.path.join(BASE_DIR, 'UPLOAD_OFANI')
 save_dir = os.path.join(BASE_DIR, 'static/RESULTS_OFANI')
-UPLOAD_FOLDER = r'/HACKATHON/UPLOAD_OFANI'
 
 def calculate(filename):
     # Get the relative path of the filename with respect to UPLOAD_FOLDER
