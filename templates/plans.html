@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href={{url_for('static' , filename = 'css/normalize.css')}}>
+        <link rel="stylesheet" href={{url_for('static' , filename = 'css/grid.css')}}>
+        <link rel='stylesheet' href={{url_for('static' , filename = 'css/style.css')}}>
+
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<!--         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type='text/css'>
+        <title>Sedimentary Rocks Classification WebApp</title>
+        <meta name="keywords" content="cutom file input, styling, label, cross-browser, accessible, input type file" />
+
+		<style>
+			.content {
+			  max-width: 500px;
+			  margin: auto;
+			  }
+			.bg-img{
+				width: 100%;
+				height: 100vh;
+				background-image:linear-gradient(rgba(0, 0, 0, 0.71),rgba(0, 0, 0, 0.7)),url('static/css/front.jpg');
+				background-size: cover;
+				background-position: center;
+			}
+
+		</style>
+
+
+    </head>
+
+    <body  style="background-image: url('/static/css/bg-plans.png'); width: 100%; background-repeat: no-repeat; background-position: center center;background-size: cover;">
+            <nav>
+                <ul style = "padding: 2%; display: flex; list-style-type:none;" class = "main-nav">
+                    <li style = "padding-right: 5%; color: white; font-size: 20pt"><a style="color: white;" href ="/"><strong>ROCKLENS</strong></a></li>
+                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%;"><a style="color: white;" href ="/"><b>Home</b></a></li>
+                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%;"><a style="color: white;" href ="#about"><b>About</b></a></li>
+                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%;"><a style="color: white;" href ="/tools"><b>Tools</b></a></li>
+                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%; "><a style="color: white;" href ="/plans"><b>Plans</b></a></li>
+                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%; "><a style="color: white;" href ="/events"><b>Events</b></a></li>
+                </ul>
+            </nav>
+
+    </body>
+            <div style = "width : 100%; padding-top : 5%; padding-bottom : 4%;">
+                <div class = "header-content">
+                    <h6 ><span class="header-content-text" style="color: #6F482B;"><b>Plans</b></span></h6>
+                </div>
+            </div>
+    <button class="btn btn-lg" style="margin-left: 35%; margin-top: 34%; background-color: #B58963; height: 5%; width: 30%; color: #ffffff"><b><i>Coming soon!</i></b></button>
+    <footer style="margin-top: 6.5%; background-color: #3B3B3B; padding: 1%">
+        <br>
+        <p style=" text-align: center; color: #FFFFFF; font-size: 12pt">© 2021 Copyright: <b>Rocklens</b></p>
+    </footer>
+</html>
