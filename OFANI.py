@@ -28,7 +28,9 @@ matplotlib.rcParams.update({'font.family': 'serif', 'font.serif': 'Times New Rom
 matplotlib.rcParams.update({'font.size': 22})
 
 # Directory to save files
-save_dir = r'C:\Users\ASUA\PycharmProjects\pythonProject1\HACKATHON_ISMC\static\RESULTS_OFANI'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+UPLOAD_FOLDER = os.path.join(BASE_DIR, 'UPLOAD_OFANI')
+save_dir = os.path.join(BASE_DIR, 'static/RESULTS_OFANI')
 UPLOAD_FOLDER = r'/HACKATHON/UPLOAD_OFANI'
 
 def calculate(filename):
