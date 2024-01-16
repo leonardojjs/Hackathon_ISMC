@@ -18,7 +18,13 @@
 
 ## Additional Information
 
-contact: 
-email: leojr7149@gmail.com
-linkedin: https://www.linkedin.com/in/leonardojjs/
+- **Contact:**
+    - Email: leojr7149@gmail.com
+    - LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/leonardojjs/)
+
+- **Compatibility:**
+    - This project is compatible with Python 3.8 and higher.
+    - Developed and tested on PyCharm IDE.
+
+For any inquiries or support, please contact the provided email address.
 
