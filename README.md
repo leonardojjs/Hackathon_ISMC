@@ -2,19 +2,25 @@
 
 ## Installation Guide
 
-1. **Install Dependencies:**
+1. **Navigate to Project Directory:**
+
+    ```bash
+    cd Hackathon_ISMC
+    ```
+
+2. **Install Dependencies:**
 
     ```bash
     pip install -r requirements.txt
     ```
 
-2. **Run the Application:**
+3. **Run the Application:**
 
     ```bash
     python app.py
     ```
 
-    These commands will install the necessary dependencies and start the application. Copy and paste them into your terminal or command prompt to execute the steps. If you encounter any issues, feel free to reach out for assistance!
+    These commands will install the necessary dependencies and start the application. Copy and paste them into your terminal or command prompt to execute the steps. Please make sure to run these commands in the terminal of PyCharm IDE or your preferred Python IDE. If you encounter any issues, feel free to reach out for assistance!
 
 ## Additional Information
 
@@ -27,4 +33,3 @@
     - Developed and tested on PyCharm IDE.
 
 For any inquiries or support, please contact the provided email address.
-
