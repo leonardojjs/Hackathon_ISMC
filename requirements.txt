@@ -10,3 +10,4 @@ geopy
 tensorflow
 h5py
 tqdm
+corner
