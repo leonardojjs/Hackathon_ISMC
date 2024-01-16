@@ -5,6 +5,7 @@
 1. **Navigate to Project Directory:**
 
     ```bash
+    git clone https://github.com/leonardojjs/Hackathon_ISMC.git
     cd Hackathon_ISMC
     ```
 
