@@ -1,0 +1,12 @@
+Flask
+numpy
+pandas
+matplotlib
+obspy
+scipy
+emcee
+requests
+geopy
+tensorflow
+h5py
+tqdm
