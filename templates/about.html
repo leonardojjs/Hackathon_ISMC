@@ -4,95 +4,83 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="/static/images/GeoX_icon.ico">
         <link rel="stylesheet" href={{url_for('static' , filename = 'css/normalize.css')}}>
         <link rel="stylesheet" href={{url_for('static' , filename = 'css/grid.css')}}>
         <link rel='stylesheet' href={{url_for('static' , filename = 'css/style.css')}}>
-
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type='text/css'>
-        <title>Sedimentary Rocks Classification WebApp</title>
+        <title>About Us</title>
         <meta name="keywords" content="cutom file input, styling, label, cross-browser, accessible, input type file" />
-
-		<style>
-			.content {
-			  max-width: 500px;
-			  margin: auto;
-			  }
-			.bg-img{
-				width: 100%;
-				height: 100vh;
-				background-image:linear-gradient(rgba(0, 0, 0, 0.71),rgba(0, 0, 0, 0.7)),url('static/css/front.jpg');
-				background-size: cover;
-				background-position: center;
-			}
-
-		</style>
-
-
     </head>
 
     <body>
+        <nav class = "main-nav">
+            <div class = "main-nav-item">
+                <a href="./">
+                    <img class = "geo-x-logo" src="static/images/GeoX_logo.png" alt="Geo-X Logo">
+                </a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/about">About</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/SeisMoT">SeisMoT</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/PHI314">PHI314</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/OFANI">OFANI</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/auto-tomography">Auto-tomography</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/helps">Helps</a>
+            </div>
+        </nav>
 
-	    <div class="bg-img" style="background-image: url('/static/css/bg-index.jpg');">
-            <nav>
-                <ul style = "padding: 2%; display: flex; list-style-type:none;" class = "main-nav">
-                    <li style="padding-right: 1%; color: white; font-size: 16pt; position: relative;"><a href="/">
-        <img src="static/images/GeoX_logo.jpg" alt="Geo-X Logo" style="vertical-align: middle; width: 180px; height: 60px; margin-right: 10px;">
-    </a>
-</li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%;"><a style="color: white;" href ="/"><b>Home</b></a></li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%;"><a style="color: white;" href ="about"><b>About</b></a></li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%;"><a style="color: white;" href ="/SeisMoT"><b>SeisMoT</b></a></li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%;"><a style="color: white;" href ="/PHI314"><b>PHI314</b></a></li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%; "><a style="color: white;" href ="/OFANI"><b>OFANI</b></a></li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%; "><a style="color: white;" href ="/helps"><b>Helps</b></a></li>
-                </ul>
-            </nav>
-                  <div style="background-color: white; margin-bottom: 5%; margin-top: 5%" id="about">
-            <div style = "width : 100%; padding-top : 3%; padding-bottom : 4%; ">
-                <div class = "header-content">
-                    <h6 ><span class="header-content-text"><a style="color: black;"><b>About Geo-X</b></a></span></h6>
+        <div class="web-content">
+            <header class="header-container">
+                <h1>About Us</h1>
+                <p>Geo-Exploration Company - Sustainable Exploration in Everywhere</p>
+            </header>
+
+            <div class="product-container">
+                <div class="product-picture">
+                    <img src="/static/images/tomography.jpg">
+                </div>
+                <div class="product-details" id="tomography">
+                    <h1>Pioneers Green Energy Solutions for Better Future</h1>
+                    <h2>The First Technology in Indonesia for Sustainable Exploration in Everywhere for Everyone</h2>
                 </div>
             </div>
-            <div style = "width : 100%;  padding-bottom : 3%;">
-                <div class = "header-content">
-                    <img src="">
-                    <p style="text-align: center; color: black; font-size: 18pt"><b><i>The First Technology in Indonesia for Sustainable Exploration <br>in Everywhere for Everyone: Geo-X Pioneers Green Energy Solutions for Better Future</i></b></p>
+
+            <div class="aspects">
+                <div class="aspects-header">
+                    <h1>Why Us?</h1>
                 </div>
-            </div>
-            <div style = "width : 100%; padding-bottom : 3%;">
-                <div class = "header-content">
-                    <div class="row">
-                    <img style="height: 100pt; width: auto; position: absolute; margin-left: -2%" src="/static/css/easy.png">
+    
+                <div class="aspects-points">
+                    <div class="aspects-container">
+                        <img style="height: 100pt; width: auto;" src="/static/css/easy.png">
+                        <h1>Easy</h1>
                     </div>
-                    <div class="row">
-                    <p style="margin-left: 25%; margin-top: 300%; text-align: center; color: black; font-size: 18pt"><b>Easy</b></p>
+                    <div class="aspects-container">
+                        <img style="height: 100pt; width: auto;" src="/static/css/accuracy.png">
+                        <h1>Accurate</h1>
                     </div>
-                </div>
-            </div>
-            <div style = "width : 100%; padding-bottom : 3%;">
-                <div class = "header-content">
-                    <div class="row">
-                    <img style="height: 100pt; width: auto; position: absolute; margin-left: -1.5%" src="/static/css/accuracy.png">
-                    </div>
-                    <div class="row">
-                    <p style="margin-left: 12%; margin-top: 165%; text-align: center; color: black; font-size: 18pt"><b>Accurate</b></p>
+                    <div class="aspects-container">
+                        <img style="height: 100pt; width: auto;" src="/static/css/colour.png">
+                        <h1>Variative</h1>
                     </div>
                 </div>
             </div>
-            <div style = "width : 100%; padding-bottom : 4%;">
-                <div class = "header-content">
-                    <div class="row">
-                    <img style="height: 100pt; width: auto; position: absolute; margin-left: -1.5%" src="/static/css/colour.png">
-                    </div>
-                    <div class="row">
-                    <p style="margin-left: 12%; margin-top: 165%; text-align: center; color: black; font-size: 18pt"><b>Variative</b></p>
-                    </div>
-                </div>
-            </div>
-	    </div>
         </div>
+        
+        <footer>
+            <p>© 2024 Copyright Geo-X</p>
+        </footer>
     </body>
 </html>
