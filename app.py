@@ -19,9 +19,13 @@ app.config['UPLOAD_FOLDER_OFANI'] = UPLOAD_FOLDER_OFANI
 UPLOAD_FOLDER_PHI314 = os.path.join(BASE_DIR, 'UPLOAD_PHI314')
 RESULTS_FOLDER_PHI314 = os.path.join(BASE_DIR, 'static/RESULTS_PHI314')
 app.config['UPLOAD_FOLDER_PHI314'] = UPLOAD_FOLDER_PHI314
+UPLOAD_FOLDER_TOMOGRAPHY = os.path.join(BASE_DIR, 'UPLOAD_TOMOGRAPHY')
+RESULTS_FOLDER_TOMOGRAPHY = os.path.join(BASE_DIR, 'static/RESULTS_TOMOGRAPHY')
+app.config['UPLOAD_FOLDER_TOMOGRAPHY'] = UPLOAD_FOLDER_TOMOGRAPHY
 json_basepath = os.path.join(os.getcwd(),"json/station_list.json")
 ALLOWED_EXT_OFANI = set(['txt', 'csv', 'xlsx'])
 ALLOWED_EXT_PHI314 = set(['mseed'])
+ALLOWED_EXT_tomography = set(['mseed', 'txt', 'csv'])
 
 
 def allowed_file_OFANI(filename):
@@ -31,6 +35,10 @@ def allowed_file_OFANI(filename):
 def allowed_file_PHI314(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1] in ALLOWED_EXT_PHI314
+
+def allowed_file_tomography(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1] in ALLOWED_EXT_tomography
 
 def is_matching_pattern(filename):
     # Define a regular expression pattern for matching the filename pattern
@@ -119,7 +127,6 @@ def upload_data_OFANI():
 
     return render_template('OFANI.html')
 
-
 @app.route('/PHI314')
 def PHI314():
     return render_template("PHI314.html")
@@ -167,13 +174,52 @@ def upload_data_PHI314():
 
     return render_template('PHI314.html')
 
+@app.route('/auto-tomography')
+def tomography():
+    return render_template("auto-tomography.html")
+
+@app.route('/success_auto-tomography', methods=['GET', 'POST'])
+def upload_data_tomography():
+    error = ''
+    if request.method == 'POST':
+        # Check if the post request has the file part
+        if 'files[]' not in request.files:
+            error = 'No file part'
+            return render_template('auto-tomography.html', error=error)
+
+        files = request.files.getlist('files[]')
+
+        # Check if there are no selected files
+        if len(files) == 0:
+            error = 'No selected files'
+            return render_template('auto-tomography.html', error=error)
+
+        success = True  # Initialize success flag
+
+        for file in files:
+            # Check file extension
+            if not allowed_file_tomography(file.filename):
+                error = 'Please upload MiniSEED, txt, or csv extension only'
+                success = False
+                break
+
+            # Save each file to a temporary location
+            filename = secure_filename(file.filename)
+            filepath = os.path.join(app.config['UPLOAD_FOLDER_TOMOGRAPHY'], filename)
+            file.save(filepath)
+
+        if success:
+            return render_template('success-auto-tomography.html')
+        else:
+            return render_template('auto-tomography.html', error=error)
+
+    return render_template('auto-tomography.html')
 
 @app.route('/helps')
 def helps():
     return render_template("helps.html")
 
-
-
 if __name__ == "__main__":
     app.run(debug=True)
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
 

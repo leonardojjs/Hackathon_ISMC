@@ -3,167 +3,154 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="/static/images/GeoX_icon.ico">
         <link rel="stylesheet" href={{url_for('static' , filename = 'css/normalize.css')}}>
         <link rel="stylesheet" href={{url_for('static' , filename = 'css/grid.css')}}>
-        <link rel='stylesheet' href={{url_for('static' , filename = 'css/styleSucc.css')}}>
-
+        <link rel='stylesheet' href={{url_for('static' , filename = 'css/style.css')}}>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type='text/css'>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <title>Results Page</title>
-
-        <style type="text/css">
-            th{
-                text-align: left;
-                font-size: 20px;
-            }
-
-            td{
-                text-align: left;
-                font-size: 18px;
-            }
-        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>OFANI</title>
     </head>
     <body>
-        <div class = "second-main" style = "height: 100% , width : 100%;">
-            <nav>
-                <ul style = "padding-right: 2%;" class = "main-nav">
-                    <li><a href ="/" style="color: #B58963"><b>Back to Homepage</b></a></li>
-                </ul>
-
-            </nav>
-            <div class = "header">
-
-             <row style="width: 100%; display: flex; justify-content: space-between; margin: 0 5% 0 5%;">
-    <div style="flex-basis: 48%;">
-        <h3 class="header-text">Distribution of Earthquake</h3>
-    </div>
-    <div style="flex-basis: 48%;">
-        <h3 class="header-text">Information of Data</h3>
-    </div>
-</row>
-                <br>
-                <row style="width: 100%; display: flex; justify-content: space-between; margin: 0 5% 0 5%;">
-    <div class="result-img-container">
-        <img class = "result-img" src={{url_for('static', filename = 'RESULTS_OFANI/'+ img1)}}>
-
-    </div>
-    <row style="width: 100%; display: flex; justify-content: center; color: #B58963; margin-bottom: 5%">
-<!--                    <div class="card" style=" box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; width: 70%; height: 100%;">-->
-                    <table class="table-bordered table-custom" style="border: 0px solid black; padding-bottom: 5%">
-                        <tbody><tr style="border : 0px solid black; padding-right: 5%">
-                            <td style="border : 0px solid black; color: black; width: 40%; text-align: left"><b>Mainshock magnitude</b></td>
-                            <td style="border : 0px solid black;color: black; text-align: left; padding: 0.5%; padding-right: 40%">: {{ mainshock_magnitude }} Mw</td>
-                        </tr>
-                        <tr style="border : 0px solid black; padding-right: 5%">
-                            <td style="border : 0px solid black; color: black; width: 20%; text-align: left"><b>Mainshock time</b></td>
-                            <td style="border : 0px solid black;color: black; text-align: left; padding: 0.5%">: {{mainshock_time }} Mw</td>
-                        </tr>
-
-                        <tr style="border : 0px solid black; padding-right: 5%">
-                            <td style="border : 0px solid black; color: black; width: 20%; text-align: left"><b>Minimum magnitude</b></td>
-                            <td style="border : 0px solid black;color: black; text-align: left; padding: 0.5%">: {{minimum_magnitude }} Mw</td>
-                        </tr><tr style="border : 0px solid black; padding-right: 5%">
-                            <td style="border : 0px solid black; color: black; width: 20%; text-align: left"><b>Maximum radius</b></td>
-                            <td style="border : 0px solid black;color: black; text-align: left; padding: 0.5%">: {{maximum_radius }} m</td>
-                        </tr>
-                        <tr style="border : 0px solid black; padding-right: 5%">
-                            <td style="border : 0px solid black; color: black; width: 20%; text-align: left"><b>Start time</b></td>
-                            <td style="border : 0px solid black;color: black; text-align: left; padding: 0.5%">: {{start_time }}</td>
-                        </tr>
-                        <tr style="border : 0px solid black; padding-right: 5%">
-                            <td style="border : 0px solid black; color: black; width: 20%; text-align: left"><b>End time</b></td>
-                            <td style="border : 0px solid black;color: black; text-align: left; padding: 0.5%">: {{end_time }}</td>
-                        </tr>
-                        <tr style="border : 0px solid black; padding-right: 5%">
-                            <td style="border : 0px solid black; color: black; width: 20%; text-align: left"><b>Events selected:</b></td>
-                            <td style="border : 0px solid black;color: black; text-align: left; padding: 0.5%">: {{events_selected}}</td>
-                        </tr>
-                        <tr style="border : 0px solid black; padding-right: 5%">
-                            <td style="border : 0px solid black; color: black; width: 20%; text-align: left"><b>Re-Entry Time Average</b></td>
-                            <td style="border : 0px solid black;color: black; text-align: left; padding: 0.5%">: {{Tmc_mean}} hours</td>
-                        </tr>
-                        <tr style="border : 0px solid black; padding-right: 5%">
-                            <td style="border : 0px solid black; color: black; width: 20%; text-align: left"><b>Re-Entry Time Maximum</b></td>
-                            <td style="border : 0px solid black;color: black; text-align: left; padding: 0.5%">: {{Tmc_max}} hours</td>
-                        </tr>
-                        <tr style="border : 0px solid black; padding-right: 5%">
-                            <td style="border : 0px solid black; color: black; width: 20%; text-align: left"><b>Re-Entry Time Minimum</b></td>
-                            <td style="border : 0px solid black;color: black; text-align: left; padding: 0.5%">: {{Tmc_min}} hours</td>
-                        </tr>
-                        <tr style="border : 0px solid black; padding-right: 5%">
-                            <td style="border : 0px solid black; color: black; width: 20%; text-align: left"><b>Re-Entry Radius Average</b></td>
-                            <td style="border : 0px solid black;color: black; text-align: left; padding: 0.5%">: {{Rseq}} m</td>
-                        </tr>
-                        <tr style="border : 0px solid black; padding-right: 5%">
-                            <td style="border : 0px solid black; color: black; width: 20%; text-align: left"><b>Re-Entry Radius Maximum</b></td>
-                            <td style="border : 0px solid black;color: black; text-align: left; padding: 0.5%">: {{Rssm}} m</td>
-                        </tr>
-                        <tr style="border : 0px solid black; padding-right: 5%">
-                            <td style="border : 0px solid black; color: black; width: 20%; text-align: left"><b>Re-Entry Radius Minimum</b></td>
-                            <td style="border : 0px solid black;color: black; text-align: left; padding: 0.5%">: {{Rmin}} m</td>
-                        </tr>
-                    </tbody></table>
-                </row>
+        <nav class = "main-nav">
+            <div class = "main-nav-item">
+                <a href="./">
+                    <img class = "geo-x-logo" src="static/images/GeoX_logo.png" alt="Geo-X Logo">
+                </a>
             </div>
-            <div class="header">
-    <row style="width: 100% ; display: flex; justify-content: center; margin-bottom: 5%">
-        <h3 class="header-text"><b>Depth and Magnitude Distribution of Seismic Event</b></h3>
-    </row>
+            <div class = "main-nav-item">
+                <a href="javascript:history.back()"><i class="fa fa-arrow-left"></i> Go Back</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/about">About</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/SeisMoT">SeisMoT</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/PHI314">PHI314</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/OFANI">OFANI</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/auto-tomography">Auto-tomography</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/helps">Helps</a>
+            </div>
+        </nav>
 
-    <div style="width: 95%; display: flex; justify-content: space-between; margin-left: 1%; margin-right: 1%;">
-        <img class="result-img" src="{{url_for('static', filename='RESULTS_OFANI/' + img2)}}" style="width: 33%; height: auto;">
-        <div style="width: 32%; display: flex; justify-content: center;">
-            <img class="result-img" src="{{url_for('static', filename='RESULTS_OFANI/' + img3)}}" style="width: 100%; height: auto;">
+        <div class="web-content">
+            <header class="header-container" id="OFANI-header">
+                <h1>OFANI</h1>
+                <p>Protocol of re-entry in underground mining after blasting or earthquake event.</p>
+            </header>
+
+            <div class="result-container">
+                <div class="earthquake-distribution">
+                    <h1>Distribution of Earthquake</h1>
+                    <h3>Information of Data</h3>
+                    <div class="ofani-earthquake-result">
+                        <img class = "ofani-result-img" src={{url_for('static', filename = 'RESULTS_OFANI/'+ img1)}}>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><b>Mainshock magnitude</b></td>
+                                    <td>{{ mainshock_magnitude }} Mw</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Mainshock time</b></td>
+                                    <td>{{ mainshock_time }} Mw</td>
+                                </tr>
+
+                                <tr>
+                                    <td><b>Minimum magnitude</b></td>
+                                    <td>{{ minimum_magnitude }} Mw</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Maximum radius</b></td>
+                                    <td>{{ "%0.3f"|format(maximum_radius|float) }} m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Start time</b></td>
+                                    <td>{{ start_time }}</td>
+                                </tr>
+                                <tr>
+                                    <td><b>End time</b></td>
+                                    <td>{{ end_time }}</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Events selected:</b></td>
+                                    <td>{{ events_selected }}</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Re-Entry Time Average</b></td>
+                                    <td>{{ "%0.3f"|format(Tmc_mean|float) }} hours</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Re-Entry Time Maximum</b></td>
+                                    <td>{{ "%0.3f"|format(Tmc_max|float) }} hours</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Re-Entry Time Minimum</b></td>
+                                    <td>{{ "%0.3f"|format(Tmc_min|float) }} hours</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Re-Entry Radius Average</b></td>
+                                    <td>{{ "%0.3f"|format(Rseq|float) }} m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Re-Entry Radius Maximum</b></td>
+                                    <td>{{ "%0.3f"|format(Rssm|float) }} m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Re-Entry Radius Minimum</b></td>
+                                    <td>{{ "%0.3f"|format(Rmin|float) }} m</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="depth-magnitude-distribution">
+                    <h1>Depth and Magnitude Distribution of Seismic Event</h1>
+                    <div class="depth-magnitude-result">
+                        <img class="result-img" src="{{url_for('static', filename='RESULTS_OFANI/' + img3)}}">
+                        <img class="result-img" src="{{url_for('static', filename='RESULTS_OFANI/' + img4)}}">
+                    </div>
+                </div>
+
+                <div class="omori-calculation">
+                    <h1>Omori Calculation</h1>
+                    <div class="omori-calculation-result">
+                        <img class="result-img" src="{{url_for('static', filename='RESULTS_OFANI/' + img5)}}">
+                        <img class="result-img" src="{{url_for('static', filename='RESULTS_OFANI/' + img6)}}">
+                    </div>
+                </div>
+
+                <div class="mcmc-analysis">
+                    <h1>Markov-Chain Monte Carlo Analysis</h1>
+                    <div class="mcmc-result">
+                        <div class="mcmc-result-inline">
+                            <img class="result-img" src="{{url_for('static', filename='RESULTS_OFANI/' + img7)}}">
+                            <img class="result-img" src="{{url_for('static', filename='RESULTS_OFANI/' + img8)}}">
+                        </div>
+                        <img class="result-img" src="{{url_for('static', filename='RESULTS_OFANI/' + img9)}}">
+                    </div>
+                </div>
+
+                <div class="final-mcmc-calculation">
+                    <h1>Final Markov-Chain Monte Carlo Calculation</h1>
+                    <div class="final-mcmc-result">
+                        <img class = "result-img" src="{{url_for('static', filename = 'RESULTS_OFANI/'+ img10)}}">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div style="width: 32%; display: flex; justify-content: flex-end;">
-            <img class="result-img" src="{{url_for('static', filename='RESULTS_OFANI/' + img4)}}" style="width: 100%; height: auto;">
-        </div>
-    </div>
-</div>
 
-<div class="header" style="margin-top: 20px;">
-    <row style="width: 100% ; display: flex; justify-content: center; margin-bottom: 5%">
-        <h3 class="header-text"><b>Omori Calculation</b></h3>
-    </row>
-
-    <div style="width: 95%; display: flex; justify-content: space-between; margin-left: 1%; margin-right: 1%;">
-        <img class="result-img" src="{{url_for('static', filename='RESULTS_OFANI/' + img5)}}" style="width: 33%; height: auto;">
-        <div style="width: 32%; display: flex; justify-content: right;">
-            <img class="result-img" src="{{url_for('static', filename='RESULTS_OFANI/' + img6)}}" style="width: 100%; height: auto;">
-        </div>
-    </div>
-</div>
-
-            <div class="header" style="margin-top: 20px;">
-    <row style="width: 100% ; display: flex; justify-content: center; margin-bottom: 5%">
-        <h3 class="header-text"><b>MCMC (Markov Chain Monte Carlo) Analysis for Curve Fitting</b></h3>
-    </row>
-
-     <div style="width: 95%; display: flex; justify-content: space-between; margin-left: 1%; margin-right: 1%;">
-        <img class="result-img" src="{{url_for('static', filename='RESULTS_OFANI/' + img7)}}" style="width: 33%; height: auto;">
-        <div style="width: 32%; display: flex; justify-content: center;">
-            <img class="result-img" src="{{url_for('static', filename='RESULTS_OFANI/' + img8)}}" style="width: 100%; height: auto;">
-        </div>
-        <div style="width: 32%; display: flex; justify-content: flex-end;">
-            <img class="result-img" src="{{url_for('static', filename='RESULTS_OFANI/' + img9)}}" style="width: 100%; height: auto;">
-        </div>
-    </div>
-</div>
-                    <div class="header" style="margin-top: 20px;">
-    <row style="width: 100% ; display: flex; justify-content: center; margin-bottom: 5%">
-        <h3 class="header-text"><b>Final Calculation with MCMC</b></h3>
-    </row>
-                        <row style="width: 100%; display: flex; justify-content: center">
-                            <div class="result-img-container">
-                                <img class = "result-img" src={{url_for('static', filename = 'RESULTS_OFANI/'+ img10)}}>
-                                </div>
-                            </div>
-
+        <footer>
+            <p>© 2024 Copyright Geo-X</p>
+        </footer>
     </body>
-
-
-<footer style="background-color: #3B3B3B; padding: 1%;">
-    <br>
-    <p style=" text-align: center; color: #FFFFFF; font-size: 12pt">© 2024 Copyright: <b>OFANI</b></p>
-</footer>
 </html>

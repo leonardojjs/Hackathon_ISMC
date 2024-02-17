@@ -71,6 +71,17 @@ iframe{
     padding: 5rem 10rem 3rem 10rem;
 }
 
+#PHI314-header{
+    background-image: linear-gradient(0deg, rgba(36, 36, 36, 0.3), rgba(15, 15, 15, 0.3)), url('/static/images/phi314.jpg');
+}
+
+#OFANI-header{
+    background-image: linear-gradient(0deg, rgba(36, 36, 36, 0.3), rgba(15, 15, 15, 0.3)), url('/static/images/ofani.jpg');
+}
+
+#tomography-header{
+    background-image: linear-gradient(0deg, rgba(36, 36, 36, 0.3), rgba(15, 15, 15, 0.3)), url('/static/images/tomography.jpg');
+}
 .header-container h1{
     font-size: 5rem;
 }
@@ -108,7 +119,7 @@ iframe{
     justify-content: center;
     align-items: center;
     display: flex;
-    max-height: 20rem;
+    max-height: 25rem;
     width: 100%;
     overflow: hidden;
 }
@@ -145,11 +156,12 @@ iframe{
 .file-form{
     padding: 1rem 20rem 1rem 20rem;
     display: flex;
-    gap: 1rem;
-    justify-content: space-between;
+    gap: 2rem;
+    justify-content: center;
 }
 
 .file-form-input{
+    align-self: center;
     max-width: 50%;
     border-radius: 200px;
     border: 1px solid #41b3a3;
@@ -190,7 +202,7 @@ iframe{
     border-radius: 5rem;
     color: #1c9282;
     font-size: 1rem;
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    padding: 1rem 1rem 1rem 1rem;
 }
 
 .upload-button:hover{
@@ -271,6 +283,88 @@ iframe{
 
 .contact-container{
     padding: 2rem 10rem 2rem 10rem;
+}
+
+.result-container{
+    display: grid;
+    padding: 2rem 10rem 3rem 10rem;
+    gap: 3rem;
+}
+
+.result-container img{
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50rem;
+    display: flex;
+}
+
+.ofani-earthquake-result{
+    display: flex;
+    align-self: self-start;
+}
+
+.ofani-earthquake-result img{
+    display: flex;
+    align-self: self-start;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 20rem;
+    display: flex;
+}
+
+.depth-magnitude-result, .omori-calculation-result{
+    display: flex;
+}
+
+.depth-magnitude-result img{
+    display: flex;
+    align-self: self-start;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 20rem;
+    display: flex;
+}
+
+.omori-calculation-result img{
+    display: flex;
+    align-self: self-start;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 20rem;
+    display: flex;
+}
+
+.mcmc-result-inline{
+    display: flex;
+}
+
+.mcmc-result img{
+    display: flex;
+    align-self: self-start;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 20rem;
+    display: flex;
+}
+
+.final-mcmc-result img{
+    display: flex;
+    align-self: self-start;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 20rem;
+    display: flex;
+}
+
+td{
+    vertical-align: top;
+    padding: 0 0.5rem 0 0;
 }
 
 footer{
