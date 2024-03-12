@@ -1,9 +1,8 @@
-* {
+body{
+    height: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-
 
 html {
     font-family: 'lato' ,'Arial' , sans-serif;
@@ -11,86 +10,162 @@ html {
     scroll-behavior: smooth;
 }
 
+h1{
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+iframe{
+    display: block;    
+    border: none;
+    height: 100vh;
+    margin-top: -5rem;
+    width: 100%;
+}
+
+.web-content{
+    padding-top: 5rem;
+}
+
+.main-nav{
+    align-items: center;
+    background-color: white;
+    color: #2d2d2d;
+    display: flex; 
+    gap: 2rem;
+    justify-content: start;
+    padding: 1rem 10rem 1rem 10rem;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+
+.main-nav a{
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.main-nav-item:hover{
+    color: #1c9282 !important;
+}
+
+.geo-x-logo{
+    vertical-align: middle; 
+    width: auto; 
+    height: 40px; 
+    max-height: 100px;
+}
+
+.header-container{
+    background-image: url('/static/css/bg-index.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 1.5rem;
+    padding: 5rem 10rem 3rem 10rem;
+}
+
+#PHI314-header{
+    background-image: linear-gradient(0deg, rgba(36, 36, 36, 0.3), rgba(15, 15, 15, 0.3)), url('/static/images/phi314.jpg');
+}
+
+#OFANI-header{
+    background-image: linear-gradient(0deg, rgba(36, 36, 36, 0.3), rgba(15, 15, 15, 0.3)), url('/static/images/ofani.jpg');
+}
+
+#tomography-header{
+    background-image: linear-gradient(0deg, rgba(36, 36, 36, 0.3), rgba(15, 15, 15, 0.3)), url('/static/images/tomography.jpg');
+}
+.header-container h1{
+    font-size: 5rem;
+}
+
+.white-container{
+    padding: 2rem 10rem 1rem 10rem;
+}
+
+.white-container h1{
+    margin: 0 0 1rem 0;
+}
+
+.product-container{
+    display: flex;
+}
+
+#SeisMoT, #OFANI{
+    margin: 2rem 2rem 2rem 10rem;
+}
+
+#PHI314, #tomography{
+    margin: 2rem 10rem 2rem 2rem;
+}
+
+.product-details h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.product-details button{
+    margin-top: 3rem;
+}
+
+.product-picture{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    max-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.product-picture img{
+    min-width: 100%;
+    min-height: 100%
+}
+
 .index-main
 {
     width: 110%;
     height: 100vh;
-
     background-size: cover;
     background-position: center;
 }
 
-.header-content {
-    margin-top: 1%; /* Adjust this value as needed */
-    margin-bottom: 1%; /* Adjust this value as needed */
-    width: 100%;
-    display: flex;
-    align-content: center;
-    align-self: center;
-    justify-content: center;
+.upload-header{
+    padding: 2rem 0 0 0;
+    text-align: center;
 }
 
-#header-button
-{
-    width: 100%;
-    display: flex;
-    align-content: center;
-    align-self: center;
-    justify-content: center;
-}
+.upload-section{
 
-.header-content-text
-{
-    font-size: 3vw;
-    font-weight: 500;
-    color: #B58963;
-    letter-spacing: 0.5px;
-}
-
-.header-content-sub
-{
-    width: 100%;
-    display: flex;
-    align-content: center;
-    align-self: center;
-    justify-content: center;
-}
-
-.header-content-info
-{
-    font-size: 18px;
-    color: #B58963;;
-}
-
-
-.upload-section
-{
-    width: 100%;
     margin-top: 2%;
 }
 
 .upload-file
 {
-    width: 100%;
     margin-top: 1%;
     margin-bottom: 1%;
 }
 
-.file-form
-{
-    padding-left: 4%;
-    padding-right: 4%;
-    width: 100%;
+.file-form{
+    padding: 1rem 20rem 1rem 20rem;
     display: flex;
-    justify-content: space-between;
+    gap: 2rem;
+    justify-content: center;
 }
 
-.file-form-input
-{
+.file-form-input{
+    align-self: center;
     max-width: 50%;
     border-radius: 200px;
     border: 1px solid #41b3a3;
-    color: white;
+    color: #2d2d2d;
     display: inline-block;
     padding: 8px 20px 8px 20px;
     font-weight: 300;
@@ -104,14 +179,36 @@ html {
     outline: none;
 }
 
-.btn
-{
-    width: 10%;
-    font-size: 20px!important;
-    height: 15%;
-    max-width: 30%;
+.button{
+    background-color: transparent;
+    border: solid;
+    border-color: #1c9282;
+    border-radius: 5rem;
+    color: #1c9282;
+    font-size: 1rem;
+    margin: 1rem 0 1rem 0;
+    padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
+.button:hover{
+    border-color: white;
+    color: white;
+}
+
+.upload-button{
+    background-color: transparent;
+    border: solid;
+    border-color: #1c9282;
+    border-radius: 5rem;
+    color: #1c9282;
+    font-size: 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.upload-button:hover{
+    background-color: #1c9282;
+    color: white;
+}
 
 .uploadOR
 {
@@ -129,7 +226,6 @@ html {
     padding-top: 1%;
     padding-bottom: 1%;
 }
-
 
 .upload-link
 {
@@ -161,218 +257,119 @@ html {
     transition: background-color 0.2s , border 0.2s , color 0.2s;
 }
 
-    .footer
-    {
-        padding-left: 2%;
-        padding-right: 2%;
-    }
-
-@media screen and (max-width: 415px)
-{
-    .index-main
-    {
-
-        background-position: inherit;
-    }
-    .header-content
-    {
-        margin-top: 15%;
-    }
-
-    .header-content-text
-    {
-        font-size: 22px;
-    }
-
-    .header-content-info
-    {
-        font-size: 11px;
-    }
-
-
-    .file-form-input
-    {
-        /*height: 30px;*/
-          border-radius: 200px;
-        padding: 4px 10px 4px 10px;
-        font-size: 10px;
-
-    }
-
-    .btn
-    {
-        padding-top: 6px!important;
-        padding-bottom: 6px!important;
-        width: 25%;
-        font-size: 11px!important;
-        line-height: 1
-    }
-
-    .link-form-input
-    {
-        width: 68%;
-        padding-right: 1%!important;
-        padding-left: 1%!important;
-        font-size: 10px;
-        padding: 1px 15px 1px 15px;
-    }
-
-    .upload-section
-    {
-        margin-top: 20%!important;
-    }
-
-    .footer
-    {
-        margin-top: 15%;
-    }
-
-    .upload-file
-    {
-        margin-top: 3%;
-        margin-bottom: 3%;
-    }
-
-
-    .upload-link
-    {
-        margin-top: 3%;
-        margin-bottom: 3%;
-    }
-
+.aspects{
+    background-color: #2d2d2d;
+    color: white;
 }
 
-@media screen and (min-width: 416px) and (max-width: 615px)
-{
-    .index-main
-    {
-        background-position: inherit;
-    }
-    .header-content
-    {
-        margin-top: 15%;
-    }
-
-    .header-content-text
-    {
-        font-size: 22px;
-    }
-
-
-    .header-content-info
-    {
-        font-size: 14px;
-    }
-
-    .file-form-input
-    {
-        height: 33px;
-        border-radius: 200px;
-        padding: 4px 10px 4px 10px;
-        font-size: 12px;
-
-    }
-
-    .btn
-    {
-        padding-top: 6px!important;
-        padding-bottom: 6px!important;
-        width: 20%;
-        font-size: 12px!important;
-        line-height: 1
-    }
-
-    .link-form-input
-    {
-        font-size: 11px;
-        padding: 1px 15px 1px 15px;
-    }
-
-    .upload-section
-    {
-        margin-top: 20%!important;
-    }
-
-    .upload-file
-    {
-        margin-top: 3%;
-        margin-bottom: 3%;
-    }
-
-
-    .upload-link
-    {
-        margin-top: 3%;
-        margin-bottom: 3%;
-    }
-
-    .footer
-    {
-        margin-top: 5%;
-    }
-
+.aspects-header h1{
+    font-size: 4rem;
+    text-align: center;
+    padding: 7rem 0 2rem 0;
 }
 
-@media screen and (min-width: 615px) and (max-width: 970px)
-{
+.aspects-points{
+    display: flex;
+    gap: 1rem;
+    text-align: center;
+    justify-content: space-around;
+    padding: 2rem 10rem 7rem 10rem;
+}
 
-    .header-content
-    {
-        margin-top: 10%;
-    }
+.aspects-container{
+    display: grid;
+    gap: 2rem;
+}
 
-    .header-content-text
-    {
-        font-size: 25px;
-    }
+.contact-container{
+    padding: 2rem 10rem 2rem 10rem;
+}
 
+.result-container{
+    display: grid;
+    padding: 2rem 10rem 3rem 10rem;
+    gap: 3rem;
+}
 
-    .header-content-info
-    {
-        font-size: 15px;
-    }
+.result-container img{
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50rem;
+    display: flex;
+}
 
-    .file-form-input
-    {
-        height: 33px;
-        border-radius: 200px;
-        padding: 4px 10px 4px 10px;
-        font-size: 12px;
+.ofani-earthquake-result{
+    display: flex;
+    align-self: self-start;
+}
 
-    }
+.ofani-earthquake-result img{
+    display: flex;
+    align-self: self-start;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 20rem;
+    display: flex;
+}
 
-    .btn
-    {
-        padding-top: 6px!important;
-        padding-bottom: 6px!important;
-        width: 15%;
-        font-size: 12px!important;
-        line-height: 1
-    }
+.depth-magnitude-result, .omori-calculation-result{
+    display: flex;
+}
 
-    .link-form-input
-    {
-        font-size: 12px;
-        padding: 1px 15px 1px 15px;
-    }
+.depth-magnitude-result img{
+    display: flex;
+    align-self: self-start;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 20rem;
+    display: flex;
+}
 
-        .upload-file
-    {
-        margin-top: 3%;
-        margin-bottom: 3%;
-    }
+.omori-calculation-result img{
+    display: flex;
+    align-self: self-start;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 20rem;
+    display: flex;
+}
 
+.mcmc-result-inline{
+    display: flex;
+}
 
-    .upload-link
-    {
-        margin-top: 3%;
-        margin-bottom: 3%;
-    }
+.mcmc-result img{
+    display: flex;
+    align-self: self-start;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 20rem;
+    display: flex;
+}
 
-    .upload-section
-    {
-        margin-top: 10%!important;
-    }
+.final-mcmc-result img{
+    display: flex;
+    align-self: self-start;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 20rem;
+    display: flex;
+}
 
+td{
+    vertical-align: top;
+    padding: 0 0.5rem 0 0;
+}
 
+footer{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem 0 0.5rem 0;
+    text-align: center;
 }

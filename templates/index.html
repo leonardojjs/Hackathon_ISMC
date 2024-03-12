@@ -1,71 +1,111 @@
 <!DOCTYPE html>
 <html lang="eng">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="/static/images/GeoX_icon.ico">
         <link rel="stylesheet" href={{url_for('static' , filename = 'css/normalize.css')}}>
         <link rel="stylesheet" href={{url_for('static' , filename = 'css/grid.css')}}>
         <link rel='stylesheet' href={{url_for('static' , filename = 'css/style.css')}}>
-
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type='text/css'>
-        <title>Omori-Utsu and Microseismic Monitoring Flow with Automated Network Integration WebApp</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Geo-X</title>
         <meta name="keywords" content="cutom file input, styling, label, cross-browser, accessible, input type file" />
-
-		<style>
-			.content {
-			  max-width: 500px;
-			  margin: auto;
-			  }
-			.bg-img{
-				width: 100%;
-				height: 100vh;
-				background-image:linear-gradient(rgba(0, 0, 0, 0.71),rgba(0, 0, 0, 0.7)),url('static/css/front.jpg');
-				background-size: cover;
-				background-position: center;
-			}
-
-		</style>
-
-
     </head>
 
     <body>
-
-	    <div class="bg-img" style="background-image: url('/static/css/bg-index.jpg');">
-            <nav>
-                <ul style = "padding: 2%; display: flex; list-style-type:none;" class = "main-nav">
-                    <li style="padding-right: 1%; color: white; font-size: 16pt; position: relative;"><a href="/">
-        <img src="static/images/GeoX_logo.jpg" alt="Geo-X Logo" style="vertical-align: middle; width: 180px; height: 60px; margin-right: 10px;">
-    </a>
-</li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%;"><a style="color: white;" href ="/"><b>Home</b></a></li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%;"><a style="color: white;" href ="/about"><b>About</b></a></li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%;"><a style="color: white;" href ="/SeisMoT"><b>SeisMoT</b></a></li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%;"><a style="color: white;" href ="/PHI314"><b>PHI314</b></a></li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%; "><a style="color: white;" href ="/OFANI"><b>OFANI</b></a></li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%; "><a style="color: white;" href ="/helps"><b>Helps</b></a></li>
-                </ul>
-            </nav>
-
-<!--                        <img style="margin-left: 63%; margin-top: 7%; height: 270pt; width: auto; position: absolute;" src="/static/css/rock.png">-->
-                        <h1 style = "padding-left: 10%; padding-top: 10%; color: white; font-size: 60pt"><b>Geo-X</b></h1>
-                        <p style = "padding-left: 10%; color: white; font-size: 25pt">Geo-Exploration Technologies Company (Geo-X)</p>
-                        <p style = "padding-left: 10%; color: white; font-size: 25pt">Sustainable Exploration in Everywhere</p>
-
-<a href="https://www.linkedin.com/company/geo-x-ind" target="_blank" style="color: white;">
-    <button class="btn btn-lg" style="margin-left: 10%; margin-top: 2%; background-color: grey; height: 5%; width: 30%;"><b>Follow our Social Media!</b></button>
-</a>
-
-
-
-	    </div>
-
-<footer style="background-color: #3B3B3B; padding: 0.1%">
-    <br>
-    <p style=" text-align: center; color: #ffffff; font-size: 12pt">© 2024 Copyright: <b>Geo-X</b></p>
-</footer>
+        <nav class = "main-nav">
+            <div class = "main-nav-item">
+                <a href="./">
+                    <img class = "geo-x-logo" src="static/images/GeoX_logo.png" alt="Geo-X Logo">
+                </a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/about">About</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/SeisMoT">SeisMoT</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/PHI314">PHI314</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/OFANI">OFANI</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/auto-tomography">Auto-tomography</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/helps">Helps</a>
+            </div>
+        </nav>
+        <div class="web-content">
+            <header class="header-container" id="header-home">
+                <h1>Geo-X</h1>
+                <p>Sustainable Exploration in Everywhere</p>
+                <a href="https://www.linkedin.com/company/geo-x-ind" target="_blank">
+                    <button class="button"><i class="fa fa-arrow-right"></i> Follow our social media!</button>
+                </a>
+            </header>
+            <section class="white-container">
+                <h1>Our products</h1>
+            </section>
+            <div class="product-container">
+                <div class="product-details" id="SeisMoT">
+                    <h1>SeisMoT</h1>
+                    Realtime IoT-based seismometer monitoring.
+                    <br>
+                    <a href="/SeisMoT" target="_blank">
+                        <button class="upload-button"><i class="fa fa-arrow-right"></i> Learn more!</button>
+                    </a>
+                </div>
+                <div class="product-picture">
+                    <img src="/static/images/seismot.jpg">
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="product-picture">
+                    <img src="/static/images/phi314.jpg">
+                </div>
+                <div class="product-details" id="PHI314">
+                    <h1>PHI314</h1>
+                    Automated detection and localization of seismic event with deep learning and non-linear inversion.
+                    <br>
+                    <a href="/PHI314" target="_blank">
+                        <button class="upload-button">Learn more! <i class="fa fa-arrow-left"></i></button>
+                    </a>
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="product-details" id="OFANI">
+                    <h1>OFANI</h1>
+                    Protocol of re-entry in underground mining after blasting or earthquake event.
+                    <br>
+                    <a href="/OFANI" target="_blank">
+                        <button class="upload-button"><i class="fa fa-arrow-right"></i> Learn more!</button>
+                    </a>
+                </div>
+                <div class="product-picture">
+                    <img src="/static/images/ofani.jpg">
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="product-picture">
+                    <img src="/static/images/tomography.jpg">
+                </div>
+                <div class="product-details" id="tomography">
+                    <h1>Auto-tomography</h1>
+                    Automatic machine learning tomography of seismic data.
+                    <br>
+                    <a href="/auto-tomography" target="_blank">
+                        <button class="upload-button">Learn more! <i class="fa fa-arrow-left"></i></button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>© 2024 Copyright Geo-X</p>
+        </footer>
+    </body>
 </html>

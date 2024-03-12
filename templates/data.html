@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="eng">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="/static/images/GeoX_icon.ico">
         <link rel="stylesheet" href={{url_for('static' , filename = 'css/normalize.css')}}>
         <link rel="stylesheet" href={{url_for('static' , filename = 'css/grid.css')}}>
         <link rel='stylesheet' href={{url_for('static' , filename = 'css/style.css')}}>
-
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type='text/css'>
-        <title>Omori-Utsu and Microseismic Monitoring Flow with Automated Network Integration WebApp</title>
+        <title>SeisMoT</title>
         <meta name="keywords" content="cutom file input, styling, label, cross-browser, accessible, input type file" />
 
 		<style>
@@ -34,30 +33,36 @@
     </head>
 
     <body>
-
-	    <div class="bg-img" style="background-image: url('/static/css/bg-index.jpg');">
-            <nav>
-                <ul style = "padding: 2%; display: flex; list-style-type:none;" class = "main-nav">
-                    <li style="padding-right: 1%; color: white; font-size: 16pt; position: relative;"><a href="/">
-        <img src="static/images/GeoX_logo.jpg" alt="Geo-X Logo" style="vertical-align: middle; width: 180px; height: 60px; margin-right: 10px;">
-    </a>
-</li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%;"><a style="color: white;" href ="/"><b>Home</b></a></li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%;"><a style="color: white;" href ="/about"><b>About</b></a></li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%;"><a style="color: white;" href ="/SeisMoT"><b>SeisMoT</b></a></li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%;"><a style="color: white;" href ="/PHI314"><b>PHI314</b></a></li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%; "><a style="color: white;" href ="/OFANI"><b>OFANI</b></a></li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%; "><a style="color: white;" href ="/helps"><b>Helps</b></a></li>
-                </ul>
-            </nav>
-
-    <!-- Use the <iframe> tag to embed an external website -->
-    <iframe src="https://thingspeak.com/channels/2377672" width="100%" height="100%" frameborder="0"></iframe>
-
-	    </div>
-</body>
-<footer style="background-color: #3B3B3B; padding: 0.1%">
-    <br>
-    <p style=" text-align: center; color: #ffffff; font-size: 12pt">© 2024 Copyright: <b>Geo-X</b></p>
-</footer>
+	    <nav class = "main-nav">
+            <div class = "main-nav-item">
+                <a href="./">
+                    <img class = "geo-x-logo" src="static/images/GeoX_logo.png" alt="Geo-X Logo">
+                </a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/about">About</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/SeisMoT">SeisMoT</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/PHI314">PHI314</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/OFANI">OFANI</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/auto-tomography">Auto-tomography</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/helps">Helps</a>
+            </div>
+        </nav>
+        <div class="web-content">
+            <iframe src="https://thingspeak.com/channels/2377672" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+    </body>
+    <footer>
+        <p>© 2024 Copyright Geo-X</p>
+    </footer>
 </html>

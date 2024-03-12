@@ -4,57 +4,59 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="/static/images/GeoX_icon.ico">
         <link rel="stylesheet" href={{url_for('static' , filename = 'css/normalize.css')}}>
         <link rel="stylesheet" href={{url_for('static' , filename = 'css/grid.css')}}>
         <link rel='stylesheet' href={{url_for('static' , filename = 'css/style.css')}}>
-
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<!--         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type='text/css'>
-        <title>Geo-X Contact Person</title>
+        <title>Contact Us</title>
         <meta name="keywords" content="cutom file input, styling, label, cross-browser, accessible, input type file" />
-
-		<style>
-			.content {
-			  max-width: 500px;
-			  margin: auto;
-			  }
-			.bg-img{
-				width: 100%;
-				height: 100vh;
-				background-image:linear-gradient(rgba(0, 0, 0, 0.71),rgba(0, 0, 0, 0.7)),url('static/css/front.jpg');
-				background-size: cover;
-				background-position: center;
-			}
-
-		</style>
-
-
     </head>
 
-    <body  style="background-image: url('/static/css/bg_helps.jpg'); background-repeat: no-repeat; background-position: center center;background-size: cover;">
-                        <nav>
-                <ul style = "padding: 2%; display: flex; list-style-type:none;" class = "main-nav">
-                    <li style="padding-right: 1%; color: white; font-size: 16pt; position: relative;"><a href="/">
-        <img src="static/images/GeoX_logo.jpg" alt="Geo-X Logo" style="vertical-align: middle; width: 180px; height: 60px; margin-right: 10px;">
-    </a>
-</li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%;"><a style="color: white;" href ="/"><b>Home</b></a></li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%;"><a style="color: white;" href ="#about"><b>About</b></a></li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%;"><a style="color: white;" href ="/SeisMoT"><b>SeisMoT</b></a></li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%;"><a style="color: white;" href ="/PHI314"><b>PHI314</b></a></li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%; "><a style="color: white;" href ="/OFANI"><b>OFANI</b></a></li>
-                    <li style = "padding-right: 5%; color: white; font-size: 16pt; padding-top: 0.2%; "><a style="color: white;" href ="/helps"><b>Helps</b></a></li>
-                </ul>
-            </nav>
-    <a href="mailto:leojr7149@gmail.com" target="_blank" style="color: white;">
-    <button class="btn btn-lg" style=" justify-content: center; margin-left: 10%; margin-top: 10%; background-color: grey; height: 5%; width: 30%;"><b>Contact the Founder</b></button>
-</a>
+    <body>
+        <nav class = "main-nav">
+            <div class = "main-nav-item">
+                <a href="./">
+                    <img class = "geo-x-logo" src="static/images/GeoX_logo.png" alt="Geo-X Logo">
+                </a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/about">About</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/SeisMoT">SeisMoT</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/PHI314">PHI314</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/OFANI">OFANI</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/auto-tomography">Auto-tomography</a>
+            </div>
+            <div class = "main-nav-item">
+                <a href ="/helps">Helps</a>
+            </div>
+        </nav>
+
+        <div class="web-content">
+            <header class="header-container">
+                <h1>Contact Us</h1>
+            </header>
+
+            <div class="contact-container">
+                <h2>For further information and pricing, please contact us!</h2>
+                <br>
+                <a href="mailto:leojr7149@gmail.com" target="_blank" style="color: white;">
+                    <button class="upload-button">Contact Us</button>
+                </a>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2024 Copyright Geo-X</p>
+        </footer>
     </body>
-    <footer style="margin-top: 55%; background-color: #3B3B3B; padding: 1%">
-        <br>
-        <p style=" text-align: center; color: #FFFFFF; font-size: 12pt">© 2024 Copyright: <b>Geo-X</b></p>
-    </footer>
 </html>

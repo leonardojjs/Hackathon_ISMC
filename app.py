@@ -23,7 +23,6 @@ json_basepath = os.path.join(os.getcwd(),"json/station_list.json")
 ALLOWED_EXT_OFANI = set(['txt', 'csv', 'xlsx'])
 ALLOWED_EXT_PHI314 = set(['mseed'])
 
-
 def allowed_file_OFANI(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1] in ALLOWED_EXT_OFANI
@@ -119,7 +118,6 @@ def upload_data_OFANI():
 
     return render_template('OFANI.html')
 
-
 @app.route('/PHI314')
 def PHI314():
     return render_template("PHI314.html")
@@ -167,13 +165,11 @@ def upload_data_PHI314():
 
     return render_template('PHI314.html')
 
-
 @app.route('/helps')
 def helps():
     return render_template("helps.html")
 
-
-
 if __name__ == "__main__":
     app.run(debug=True)
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
 
